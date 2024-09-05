@@ -1,0 +1,775 @@
+{
+	"info": {
+		"_postman_id": "0adac209-2de2-46d6-9b2f-e8e207a6b110",
+		"name": "job application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34517746"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\" : \"ahmed\",\r\n    \"lastName\" : \"mohamed\",\r\n    \"email\" : \"ahmed@gmail.com\",\r\n    \"password\" : \"a123\",\r\n    \"DOB\" : \"2000-05-06\",\r\n    \"mobileNumber\" : \"01021561879\",\r\n    \"role\" : \"User\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ahmed@gmail.com\",\r\n    \"password\": \"a123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAcc",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwiaWF0IjoxNzIwNzc5OTA2fQ.7OlIN57jeX-JqHbM3HiJmkSv0glLz65q2K3fr8CwPZs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\" : \"omnia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/6690e70d6960e38da9ffb518",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"6690e70d6960e38da9ffb518"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAcc",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoiYW1pYXJAZ21haWwuY29tIiwiaWF0IjoxNzIwNzgwMzMxfQ.IEAFB-JoXWZ2qs664QeNjJHR6JRJ6E8pjdaHYed4cTo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users/6690e8ef7a83ff02a0cbee6e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"6690e8ef7a83ff02a0cbee6e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getData",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwiaWF0IjoxNzIwNzc5OTA2fQ.7OlIN57jeX-JqHbM3HiJmkSv0glLz65q2K3fr8CwPZs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"ahmed@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/userData",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"userData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profileData",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/6690e8ef7a83ff02a0cbee6e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"6690e8ef7a83ff02a0cbee6e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePass",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwiaWF0IjoxNzIwNzc5OTA2fQ.7OlIN57jeX-JqHbM3HiJmkSv0glLz65q2K3fr8CwPZs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\" : \"a123\",\r\n    \"newPass\" : \"abc1456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/updatePass",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"updatePass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgetPass",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoiYW1pYXJAZ21haWwuY29tIiwiaWF0IjoxNzIwNzgwMzMxfQ.IEAFB-JoXWZ2qs664QeNjJHR6JRJ6E8pjdaHYed4cTo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"ahmed@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/forgetPass",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"forgetPass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "accounts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recoveryEmail\" : \"a132@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/accounts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "addcompany",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoib3Nvc0BnbWFpbC5jb20iLCJpYXQiOjE3MjA4NDgwNTN9.dox1RWMSkFeFeE17u2-oLiuspcHS4kwY9Uwi1D3jnZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"route\" ,\r\n    \"description\" : \"abdlmg\",\r\n    \"industry\" : \"courses\",\r\n    \"address\" : \"cairo\",\r\n    \"numberOfEmployees\" : \"10-20\",\r\n    \"email\" : \"route@gmail.com\",\r\n    \"companyHR\" : \"6690e9d13fdb8a30dbb0c0b3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/company/addcompany",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"addcompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatecompany",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoib3Nvc0BnbWFpbC5jb20iLCJpYXQiOjE3MjA4NDgwNTN9.dox1RWMSkFeFeE17u2-oLiuspcHS4kwY9Uwi1D3jnZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"abcdef\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/company/updatecompany/66794e3c69d330f3cebe8fab",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"updatecompany",
+								"66794e3c69d330f3cebe8fab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getdata",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoib3Nvc0BnbWFpbC5jb20iLCJpYXQiOjE3MjA4NDgwNTN9.dox1RWMSkFeFeE17u2-oLiuspcHS4kwY9Uwi1D3jnZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/company/getdata/66794e3c69d330f3cebe8fab",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"getdata",
+								"66794e3c69d330f3cebe8fab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletecompany",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoib3Nvc0BnbWFpbC5jb20iLCJpYXQiOjE3MjA4NDgwNTN9.dox1RWMSkFeFeE17u2-oLiuspcHS4kwY9Uwi1D3jnZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/company/deletecompany/66794e3c69d330f3cebe8fab",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"deletecompany",
+								"66794e3c69d330f3cebe8fab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchcompany",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoib3Nvc0BnbWFpbC5jb20iLCJpYXQiOjE3MjA4NDgwNTN9.dox1RWMSkFeFeE17u2-oLiuspcHS4kwY9Uwi1D3jnZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"route\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/company/searchcompany",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"searchcompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applicationdata",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoib3Nvc0BnbWFpbC5jb20iLCJpYXQiOjE3MjA4NDgwNTN9.dox1RWMSkFeFeE17u2-oLiuspcHS4kwY9Uwi1D3jnZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/company/applicationdata/66794e3c69d330f3cebe8fab",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"applicationdata",
+								"66794e3c69d330f3cebe8fab"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "jobs",
+			"item": [
+				{
+					"name": "addjob",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoib3Nvc0BnbWFpbC5jb20iLCJpYXQiOjE3MjA4NDgwNTN9.dox1RWMSkFeFeE17u2-oLiuspcHS4kwY9Uwi1D3jnZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"backend\",\r\n    \"location\" : \"remotly\",\r\n    \"workingTime\" : \"fulltime\",\r\n    \"seniorityLevel\" : \"Junior\",\r\n    \"jobDescription\" : \"abbs\",\r\n    \"technicalSkills\" : [\"a\" , \"b\"],\r\n    \"softSkills\" : [\"c\" , \"d\" , \"e\"],\r\n    \"addedBy\" : \"6690e9d13fdb8a30dbb0c0b3\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/job/addjob",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"addjob"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatejob",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoib3Nvc0BnbWFpbC5jb20iLCJpYXQiOjE3MjA4NDgwNTN9.dox1RWMSkFeFeE17u2-oLiuspcHS4kwY9Uwi1D3jnZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location\" : \"onsite\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/job/updatejob/669209ff668099bf8824c4a0",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"updatejob",
+								"669209ff668099bf8824c4a0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletejob",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoib3Nvc0BnbWFpbC5jb20iLCJpYXQiOjE3MjA4NDgwNTN9.dox1RWMSkFeFeE17u2-oLiuspcHS4kwY9Uwi1D3jnZA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/job/deletejob/66920af1059d142c35794bc2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"deletejob",
+								"66920af1059d142c35794bc2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alljobs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoib3Nvc0BnbWFpbC5jb20iLCJpYXQiOjE3MjA4NDgwNTN9.dox1RWMSkFeFeE17u2-oLiuspcHS4kwY9Uwi1D3jnZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/job/alljobs",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"alljobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alljob",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoib3Nvc0BnbWFpbC5jb20iLCJpYXQiOjE3MjA4NDgwNTN9.dox1RWMSkFeFeE17u2-oLiuspcHS4kwY9Uwi1D3jnZA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/job/alljob/669209ff668099bf8824c4a0",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"alljob",
+								"669209ff668099bf8824c4a0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jobmatch",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoib3Nvc0BnbWFpbC5jb20iLCJpYXQiOjE3MjA4NDgwNTN9.dox1RWMSkFeFeE17u2-oLiuspcHS4kwY9Uwi1D3jnZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location\" : \"onsite\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/job/jobmatch",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"jobmatch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applayjob",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTBlNzBkNjk2MGUzOGRhOWZmYjUxOCIsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwiaWF0IjoxNzIwNzc5OTA2fQ.7OlIN57jeX-JqHbM3HiJmkSv0glLz65q2K3fr8CwPZs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "jobId",
+									"value": "669209ff668099bf8824c4a0",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "6690e70d6960e38da9ffb518",
+									"type": "text"
+								},
+								{
+									"key": "userTechSkills",
+									"value": "a",
+									"type": "text"
+								},
+								{
+									"key": "userSoftSkills",
+									"value": "c",
+									"type": "text"
+								},
+								{
+									"key": "userResume",
+									"type": "file",
+									"src": "/C:/Users/Mariam/Desktop/exam/Doc1.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/job/applay/669209ff668099bf8824c4a0",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"applay",
+								"669209ff668099bf8824c4a0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
